@@ -33,7 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   jaffle_shop:
+    +materialized: table
       # Applies to all files under models/example/
+<<<<<<< HEAD
       example:
           materialized: view
       dwh:
@@ -43,3 +45,5 @@ vars:
     start_date: '2020-01-01' #'2000-01-01'
     end_date: '2000-01-01'
     offset_days: 14 # Number of days previous of the current day, that will be loaded in the incremental models
+=======
+>>>>>>> 48b636420f52b597970c3bec9cd21812e32c490d
