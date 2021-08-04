@@ -36,3 +36,10 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: view
+      dwh:
+          materialized: table
+
+vars:
+    start_date: '2020-01-01' #'2000-01-01'
+    end_date: '2000-01-01'
+    offset_days: 14 # Number of days previous of the current day, that will be loaded in the incremental models
