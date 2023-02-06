@@ -26,4 +26,5 @@ WHERE 1=1
 {% if is_incremental() -%}
   AND date >= date_sub(CURRENT_DATE(), INTERVAL {{ var('offset_days') }} DAY)
   -- and date between '{{ var('start_date') }}' and '{{var('end_date')}}'
-{% endif %}
+  -- hola
+{% endif %} 
